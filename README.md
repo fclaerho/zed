@@ -81,4 +81,4 @@ A language module MUST have at least those two callbacks:
 * `apply_[your file extension]` which will import the global variables
   `keyWords` `commands` `ranges` `comments` to complete list of keywords, ranges, etc... with
   colors
-* The linkedApp can be a local function, but it need to have a filename as parameter.
+* The `linkedApp` can be a local function, but it need to have a filename as parameter.
