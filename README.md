@@ -40,18 +40,20 @@ On conflict, if the default name is used, an internal function will give it anot
 SYNTAX HIGHLIGHTING & MODULES
 =============================
 
-By default, z only recognizes the 'text' file type and so, doesn't apply any syntax highlighting.
-However as z is built with a module support, it's easy to add a new filetype. Each filetype implies
-new colorations rules, new filename pattern and a new linked command. The status bar below
-shows you all this informations for the current opened file (me). You can find a line saying:
-"Working on <<Help.me.ObiWan>> (Txt/)" so the current file type is "Txt" and there's no linked
-application but if a language plugin was loaded, you could see for a tcltk script for instance:
-"Working on <<filename>> (TclTk/execWish)" When a language plugin is loaded, it adds a new
-entry in the Languages menu, and if autoSwitch is enabled (by default, it does) when you will
-open a file matching the pattern given by the language plugin the coloration rules will be
-automatically applied. If autoSwitch is disabled, the selected language rules will always be applied
-(simply click on an entry to change it)
-For launch the linked command, click on the cpu icon (or use menus).
+By default, z only recognizes the 'text' file type and doesn't apply any syntax highlighting.
+However as z is built with a module support, it's easy to add a new filetype.
+Each filetype is associated to:
+* highlighting rules,
+* a filename pattern,
+* a linked command.
+The status bar shows all this informations for the current opened file;
+e.g.:
+* for a text file: `Working on <<README.txt>> (Txt/)` (no linked application),
+* for a tck/tk script: `Working on <<foo.tcl>> (TclTk/execWish)` (linked app: wish)
+When a language plugin is loaded it adds a new entry in the Languages menu
+and if autoSwitch is enabled (default) when you open a file matching the pattern given
+by the language plugin the highlighting rules are automatically applied.
+To launch the linked command, click on ![the cpu icon](https://github.com/claerhout/zed/raw/master/gif/cpu.gif) or use menus.
 
 STRING SEARCH
 =============
