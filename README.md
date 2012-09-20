@@ -4,7 +4,8 @@ FOREWORD
 _20 Sep. 2012._
 
 This is probably my oldest "real" project, dating back from engineering school (read: **no longer maintained**).
-We were then learning Tk, and it was my first GUI toolkit... I hacked this code editor "Z" out of enthusiasm.
+We were learning Tk on Solaris at that time, and it was my first GUI toolkit...
+I hacked this code editor "Z" out of enthusiasm.
 As for other "finished" projects, I decided to dig it out and store it on github for posterity ;-)
 I renamed a couple of files, removed some keybindings that were preventing it to start
 and surprisingly it's still working on my MacBook'11...
