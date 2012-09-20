@@ -9,7 +9,7 @@ As for other "finished" projects, I decided to dig it out and store it on github
 I renamed a couple of files, removed some keybindings that were preventing it to start
 and surprisingly it's still working on my MacBook'11...
 Some menu titles are missing though, but except if asked otherwise I don't really plan to fix it.
-I edited a bit the readme to improve its readability.
+I edited a bit the readme to fix some english and convert it to markdown.
 
 * * *
 
@@ -26,11 +26,11 @@ simply click on a item to open it.
 If you start to modify the opened file
 (pressing some key is considered as a modification in the file, mouse events are not)
 you won't be allowed to open or create another file:
-* click on the ![floppy icon](https://github.com/claerhout/zed/raw/master/16_save.gif) or use menus to save your modifications,
-* or click on the ![revert icon](https://github.com/claerhout/zed/raw/master/16_revert.gif) or use menus to discard your changes.
+* click on the ![floppy icon](https://github.com/claerhout/zed/raw/master/gif/16_save.gif) or use menus to save your modifications,
+* or click on the ![revert icon](https://github.com/claerhout/zed/raw/master/gif/16_revert.gif) or use menus to discard your changes.
 
 To create a new file,
-click on the ![beach icon](https://github.com/claerhout/zed/raw/master/holiday.gif),
+click on the ![beach icon](https://github.com/claerhout/zed/raw/master/gif/holiday.gif),
 the file name will be a default one.
 You can give it another name by entering it in the text box next to the toolbar and then
 click again on the beach icon.
