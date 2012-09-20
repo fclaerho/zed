@@ -59,20 +59,25 @@ To launch the linked command, click on ![the cpu icon](https://github.com/claerh
 STRING SEARCH
 =============
 
-When a file is opened, you can search a string by completing the entry box next the toolbar
-and by clicking then on the 'target' icon. The number of matches will be showed in the status
-bar, text will be highlighted and the window will be scrolled to reach the first highlighted string.
+When a file is opened, you can search a string by completing the entry box next to the toolbar
+and by clicking on ![the goals icon](https://github.com/claerhout/zed/raw/master/gif/cpu.gif).
+The number of matches will be showed in the status bar,
+the matching text will be highlighted
+and the window will be scrolled to reach the first matching string.
 
 CONFIGURATION
 =============
 
-There's not yet a configuration tool so open the 'z.conf.tcl' file to customize variables.
-This is the same game for the syntax color rules (edit the module mod_...tcl)
-If you want to add a new language support module, name it mod_languageID.tcl and move it
-in the z core script directory. A language module MUST have @least two functions which are
-called by the module loader:
-  * load_mod_languageID wich will used the core function 'addType pattern extansion linkedApp'
-  * apply_[your file extension] which will import the global variables
-		keyWords commands ranges comments to complete list of keywords, ranges, etc...with
-		colors
-the linkedApp can be a local function, but it need to have a filename as parameter.
+There's no configuration tool,
+you can directly edit `z.conf.tcl` to customize variables.
+Idem for syntax color rules (edit the corresponding module `mod_...tcl`)
+If you want to add a new language:
+* create a tcl script, name it `mod_[language name].tcl`
+* move it into the z core script directory.
+
+A language module MUST have at least those two callbacks:
+* `load_mod_languageID` wich will used the core function 'addType pattern extension linkedApp'
+* `apply_[your file extension]` which will import the global variables
+  `keyWords` `commands` `ranges` `comments` to complete list of keywords, ranges, etc... with
+  colors
+* The linkedApp can be a local function, but it need to have a filename as parameter.
