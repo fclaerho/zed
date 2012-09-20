@@ -61,7 +61,7 @@ STRING SEARCH
 =============
 
 When a file is opened, you can search a string by completing the entry box next to the toolbar
-and by clicking on ![the goals icon](https://github.com/claerhout/zed/raw/master/gif/cpu.gif).
+and by clicking on ![the goals icon](https://github.com/claerhout/zed/raw/master/gif/goals.gif).
 The number of matches will be showed in the status bar,
 the matching text will be highlighted
 and the window will be scrolled to reach the first matching string.
