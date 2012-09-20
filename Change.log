@@ -1,0 +1,166 @@
+		
+	'z' Changelog and initial US3R M4NU4L
+	-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+@Sun Feb 01 15:38:16 CET 2004 - v1.3R
+
+	-pressing F1 indent the selected text area, F2 reverse the process
+	-'bookmarks' and historic management
+		->historic nearly makes z to be multibuffered
+	-<alt-t> for tags
+	-<ctrl-e>and <ctrl-alt-e> removed, the data entry react now like vi
+		-> /str to look for str
+		-> :cmd to execute the tcl cmd
+	-the file list now give the number of items
+	-'newFolder' tool
+	-copy/cut/paste work now with the modifier 'alt' due to tk constraint
+		(ctrl-v is already bound and it seems it cannot be undone)
+
+@Fri Jan 30 14:03:09 CET 2004 - v1.3 final
+
+	-hilighting mode has been changed to speed up the whole thing
+	(this was too sloooow on several machines)
+
+	-sideBar cannot be fooled anymore :)
+
+	-splash screen appears now *before* the loading, it a bit more logical
+
+	-comment hilighting primitive has been 'fixed'.
+
+	-version now frozen...
+
+@Thu Jan 29 00:39:51 CET 2004 - v1.3b5
+
+	-all the 'fileHasChanged' bugs have been fixed (see below the details).
+	-all's almost over!
+	
+	'fileHasChanged' is now fully reliable! (if there no remaining bug :)
+	After the tests of this beta version, the final 1.3 will be available...
+
+@Sun Jan 25 23:20:52 CET 2004
+
+	KNOWN BUG: if you work on window$ files from a posix system, there'll be
+	a little problem as the end line chars (\n\r) are translated into simple (\n) by
+	the 'text' widget; so the editor believe you've modified the file even if u don't
+	do anything! - This will be fixed soon...
+
+@Thu Jan 22 00:07:40 CET 2004 - v1.3b4
+
+	-added the lineFinder box and the related stuff
+	-the code has been a bit cleaned (about the sync/resync functions)
+	-added the rewrite configuration menu
+
+	KNOWN BUG: the 'fileHasChanged' function is not really reliable
+	so even if u don't change the file size, but you do have modified
+	something, the editor won't see anything - be careful.
+
+@Mon Jan 19 18:53:11 CET 2004 - v1.3b3
+
+	-configuration file 'update' function rebuilt  to allow
+	modifications during the current session
+
+	-'ghost file ' bug fixed (if you move/remove a file that
+	was loaded in the buffer=huge problem...but this is now ~managed!)
+
+@Sun Jan 18 00:23:03 CET 2004 - v1.3b2
+
+	-Color 'theme' support via tk_setPalette
+	-window geometry status saved in the conf. file
+	-'Home' button added
+	-access restriction bug fixed
+	-splash screen
+	-initialization sequence moved into 'z.tcl'
+	-hidden shortcuts (god mode :)
+		(the comand is entered in the '.data' entry)
+		-<ctrl-e> execute the command via exec
+		-<ctrl-alt-e> execute the command as a [tcl/tk]-script command
+			('exit' is usefull when the editor is going mad and all is over due to a bug)
+	-new language CC (c++)
+	-new language xml
+	-new plugin advanced research (alpha)
+
+@Sat Jan 17 00:52:57 CET 2004 - v1.3b1
+
+	-UI improvement:
+		-the folder list can be resized using the bottom scale
+		-a side bar has been added to show the line numbers
+		-a new logo (cf about box)
+	-Browsing improvement
+		-even if z should still be considered as a 'local' editor, the current directory can be changed
+	-syntax hilighting engine has been redone (the file opening sequence was too slow)
+	-<Control-s> bug fixed
+
+@ (...) - v1.2
+
+	lost in virtual space (tm)...
+
+@Tue May 13 00:14:58 CEST 2003 - v1.1
+
+	Syntax highlighting algorithms update
+	Checkpoints
+	C language support
+	file modification mark
+	big changes in key links
+	...
+
+
+@Mon May 12 01:20:01 CEST 2003 - v1.0
+
+	Intro && Files:
+	-=-=-=-=-=-=-=-
+	z is a light local editor, ie you cannot open a file straight away with it. When z is lauched there's
+	no opened file so: either you create a new one (toolbar button, File menu) or you select a file
+	in the side listbox. This listbox only shows the files in the current directory and you cannot change
+	of directory (z is only a local editor). If you want to work on files which are not in this directory
+	then simply open another z session in the right directory.
+
+	The side listbox is done to allow browsing between current directory files, simply click on a item
+	to view it. However if you start to modify something in the opened file (pressing some key is
+	considered as a modification in the file, mouse events are not) you won't be allowed to change
+	or create a new file: click on the floppy icon (or use menus) to save your modifications.
+	If you prefer not then click on the floppy icon with a yellow arrow to 'close' the file (in this case
+	the file won't be longer considered as modified but will remain opened)
+
+	To create a new file, click on the beach icon in the toolbar, but in this case the file name'll be a
+	default one. You can give a personal name by entering it in the text box next the toolbar and then
+	click on the beach icon. if the file aready exists it won't be erased, a dialog box 'll tell you to try
+	another name. If the default name was used, an internal function will give it another unique name.
+
+	Syntax highlighting / Modules:
+	-=-=-=-=-=-=-=--=-=-=-=-=-=-=-
+	By default, z only recognizes the 'text' file type and so, doesn't apply any syntax highlighting.
+	However as z is built with a module support, it's easy to add a new filetype. Each filetype implies
+	new colorations rules, new filename pattern and a new linked command. The status bar below
+	shows you all this informations for the current opened file (me). You can find a line saying:
+	"Working on <<Help.me.ObiWan>> (Txt/)" so the current file type is "Txt" and there's no linked
+	application but if a language plugin was loaded, you could see for a tcltk script for instance:
+	"Working on <<filename>> (TclTk/execWish)" When a language plugin is loaded, it adds a new
+	entry in the Languages menu, and if autoSwitch is enabled (by default, it does) when you will
+	open a file matching the pattern given by the language plugin the coloration rules will be
+	automatically applied. If autoSwitch is disabled, the selected language rules will always be applied
+	(simply click on an entry to change it)
+	For launch the linked command, click on the cpu icon (or use menus).
+
+	Research:
+	-=-=-=-=-=-
+	When a file is opened, you can search a string by completing the entry box next the toolbar
+	and by clicking then on the 'target' icon. The number of matches will be showed in the status
+	bar, text will be highlighted and the window will be scrolled to reach the first highlighted string.
+
+	Configuration:
+	-=-=-=-=-=-=-=-
+	There's not yet a configuration tool so open the 'z.conf.tcl' file to customize variables.
+	This is the same game for the syntax color rules (edit the module mod_...tcl)
+	If you want to add a new language support module, name it mod_languageID.tcl and move it
+	in the z core script directory. A language module MUST have @least two functions which are
+	called by the module loader:
+	->load_mod_languageID wich will used the core function 'addType pattern extansion linkedApp'
+	->apply_[your file extension] which will import the global variables
+			keyWords commands ranges comments to complete list of keywords, ranges, etc...with
+			colors
+	the linkedApp can be a local function, but it need to have a filename as parameter.
+
+	Notes:
+	-=-=-=-
+	Remember that z is a tcl script, so if something DOESN'T SUIT you, simply MODIFY THE CODE.
+	If you find a bug, read the previous line and send me the new version :)
