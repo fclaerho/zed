@@ -37,45 +37,39 @@ click again on the beach icon.
 if the file aready exists it won't be erased, a dialog box will warn you about the conflict.
 On conflict, if the default name is used, an internal function will give it another unique name.
 
-Syntax highlighting & Modules
------------------------------
+SYNTAX HIGHLIGHTING & MODULES
+=============================
 
-	By default, z only recognizes the 'text' file type and so, doesn't apply any syntax highlighting.
-	However as z is built with a module support, it's easy to add a new filetype. Each filetype implies
-	new colorations rules, new filename pattern and a new linked command. The status bar below
-	shows you all this informations for the current opened file (me). You can find a line saying:
-	"Working on <<Help.me.ObiWan>> (Txt/)" so the current file type is "Txt" and there's no linked
-	application but if a language plugin was loaded, you could see for a tcltk script for instance:
-	"Working on <<filename>> (TclTk/execWish)" When a language plugin is loaded, it adds a new
-	entry in the Languages menu, and if autoSwitch is enabled (by default, it does) when you will
-	open a file matching the pattern given by the language plugin the coloration rules will be
-	automatically applied. If autoSwitch is disabled, the selected language rules will always be applied
-	(simply click on an entry to change it)
-	For launch the linked command, click on the cpu icon (or use menus).
+By default, z only recognizes the 'text' file type and so, doesn't apply any syntax highlighting.
+However as z is built with a module support, it's easy to add a new filetype. Each filetype implies
+new colorations rules, new filename pattern and a new linked command. The status bar below
+shows you all this informations for the current opened file (me). You can find a line saying:
+"Working on <<Help.me.ObiWan>> (Txt/)" so the current file type is "Txt" and there's no linked
+application but if a language plugin was loaded, you could see for a tcltk script for instance:
+"Working on <<filename>> (TclTk/execWish)" When a language plugin is loaded, it adds a new
+entry in the Languages menu, and if autoSwitch is enabled (by default, it does) when you will
+open a file matching the pattern given by the language plugin the coloration rules will be
+automatically applied. If autoSwitch is disabled, the selected language rules will always be applied
+(simply click on an entry to change it)
+For launch the linked command, click on the cpu icon (or use menus).
 
-Research
---------
+STRING SEARCH
+=============
 
-	When a file is opened, you can search a string by completing the entry box next the toolbar
-	and by clicking then on the 'target' icon. The number of matches will be showed in the status
-	bar, text will be highlighted and the window will be scrolled to reach the first highlighted string.
+When a file is opened, you can search a string by completing the entry box next the toolbar
+and by clicking then on the 'target' icon. The number of matches will be showed in the status
+bar, text will be highlighted and the window will be scrolled to reach the first highlighted string.
 
-Configuration
--------------
+CONFIGURATION
+=============
 
-	There's not yet a configuration tool so open the 'z.conf.tcl' file to customize variables.
-	This is the same game for the syntax color rules (edit the module mod_...tcl)
-	If you want to add a new language support module, name it mod_languageID.tcl and move it
-	in the z core script directory. A language module MUST have @least two functions which are
-	called by the module loader:
-	->load_mod_languageID wich will used the core function 'addType pattern extansion linkedApp'
-	->apply_[your file extension] which will import the global variables
-			keyWords commands ranges comments to complete list of keywords, ranges, etc...with
-			colors
-	the linkedApp can be a local function, but it need to have a filename as parameter.
-
-Notes
------
-
-	Remember that z is a tcl script, so if something DOESN'T SUIT you, simply MODIFY THE CODE.
-	If you find a bug, read the previous line and send me the new version :)
+There's not yet a configuration tool so open the 'z.conf.tcl' file to customize variables.
+This is the same game for the syntax color rules (edit the module mod_...tcl)
+If you want to add a new language support module, name it mod_languageID.tcl and move it
+in the z core script directory. A language module MUST have @least two functions which are
+called by the module loader:
+  * load_mod_languageID wich will used the core function 'addType pattern extansion linkedApp'
+  * apply_[your file extension] which will import the global variables
+		keyWords commands ranges comments to complete list of keywords, ranges, etc...with
+		colors
+the linkedApp can be a local function, but it need to have a filename as parameter.
