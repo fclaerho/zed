@@ -11,7 +11,8 @@ Tcl/Tk is certainly not the fashion language lately but I still find it to be ha
 As for other "finished" projects, I decided to dig it out and store it on github for posterity ;-)
 I renamed a couple of files, removed some keybindings that were preventing it to start
 and surprisingly it's still working on my MacBook'11...
-Some menu titles are missing though, but except if asked otherwise I don't really plan to fix it.
+By the way, as it's not indicated in the text below, to run this program, type `wish z.tcl`.
+Some menu titles are missing, but except if asked otherwise I don't really plan to fix it.
 I edited a bit the readme to fix some english and convert it to markdown.
 
 * * *
