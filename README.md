@@ -30,11 +30,11 @@ simply click on a item to open it.
 If you start to modify the opened file
 (pressing some key is considered as a modification in the file, mouse events are not)
 you won't be allowed to open or create another file:
-* click on ![the floppy icon](https://github.com/claerhout/zed/raw/master/gif/16_save.gif) or use menus to save your modifications,
-* or click on ![the revert icon](https://github.com/claerhout/zed/raw/master/gif/16_revert.gif) or use menus to discard your changes.
+* click on ![the floppy icon](https://github.com/fclaerho/zed/raw/master/gif/16_save.gif) or use menus to save your modifications,
+* or click on ![the revert icon](https://github.com/fclaerho/zed/raw/master/gif/16_revert.gif) or use menus to discard your changes.
 
 To create a new file,
-click on ![the beach icon](https://github.com/claerhout/zed/raw/master/gif/holiday.gif),
+click on ![the beach icon](https://github.com/fclaerho/zed/raw/master/gif/holiday.gif),
 the file name will be a default one.
 You can give it another name by entering it in the text box next to the toolbar and then
 click again on the beach icon.
@@ -58,13 +58,13 @@ The status bar shows all this informations for the current opened file, e.g.:
 When a language plugin is loaded it adds a new entry in the Languages menu
 and if autoSwitch is enabled (default) when you open a file matching the pattern given
 by the language plugin the highlighting rules are automatically applied.
-To launch the linked command, click on ![the cpu icon](https://github.com/claerhout/zed/raw/master/gif/cpu.gif) or use menus.
+To launch the linked command, click on ![the cpu icon](https://github.com/fclaerho/zed/raw/master/gif/cpu.gif) or use menus.
 
 STRING SEARCH
 =============
 
 When a file is opened, you can search a string by completing the entry box next to the toolbar
-and by clicking on ![the goals icon](https://github.com/claerhout/zed/raw/master/gif/goals.gif).
+and by clicking on ![the goals icon](https://github.com/fclaerho/zed/raw/master/gif/goals.gif).
 The number of matches will be showed in the status bar,
 the matching text will be highlighted
 and the window will be scrolled to reach the first matching string.
